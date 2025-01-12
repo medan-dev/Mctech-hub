@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#4CAF50">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta name="description" content="Contact Us">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mctech-hub - Contact</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+
+<body>
+    <div id="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+    <header>
+        <nav>
+            <div class="logo">Mctech-hub</div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="package1.html">Packages</a></li>
+                <li><a href="app.html">App Development</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Location section -->
+        <section id="location">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d997.4363098811981!
+                2d32.57105261349141!3d0.34678749931083563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbb8661e6b291%3A0x2344421bc1c7ca52!2sMctech-hub!5e0!3m2!1sen!2sug!4v1736272999248!5m2!1sen!2sug"
+                width="100%" height="450" margin-top="30px" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+
+        <!-- Contact form section -->
+        <section id="contact" class="animate__animated animate__fadeInUp">
+            <h2>Contact Us</h2>
+            <form id="contact-form" onsubmit="sendSMS(event)">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="button">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Floating Buttons -->
+    <div class="floating-buttons">
+        <a href="tel:+256743483280" class="floating-button animate__animated animate__bounceIn">
+            <i class="fas fa-phone"></i>
+        </a>
+        <a href="sms:+256743483280" class="floating-button animate__animated animate__bounceIn animate__delay-1s">
+            <i class="fas fa-envelope"></i>
+        </a>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Mctech-hub</h3>
+                <p>Leading web development company in Uganda, offering top-notch web and application development services.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
+                    <li><a href="services.html"><i class="fas fa-concierge-bell"></i>Services</a></li>
+                    <li><a href="portfolio.html"><i class="fas fa-briefcase"></i>Portfolio</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i>Contact</a></li>
+                    <li><a href="package1.html"><i class="fas fa-box"></i>Packages</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Mctech-hub. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        function sendSMS(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            const smsBody = `Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
+            window.location.href = `sms:+256743483280?body=${smsBody}`;
+        }
+    </script>
+</body>
+
+</html>

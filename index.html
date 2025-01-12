@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#4CAF50">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta name="description" content="Best Web Development Company in Uganda">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        .testimonial-section {
+            padding: 50px 20px;
+            background-color: #f9f9f9;
+            text-align: center;
+            animation: fadeInUp 1s ease;
+        }
+        .testimonial-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            animation: fadeIn 2s;
+        }
+        .testimonials {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .testimonial-card {
+            flex: 1 1 calc(33.333% - 40px);
+            max-width: calc(33.333% - 40px);
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeInUp 1s ease;
+            box-sizing: border-box;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .testimonial-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .testimonial-card p {
+            font-size: 1em;
+            margin: 10px 0;
+        }
+        .testimonial-card strong {
+            display: block;
+            margin-top: 10px;
+            font-size: 1.1em;
+            color: #4CAF50;
+        }
+        @media (max-width: 768px) {
+            .testimonial-card {
+                flex: 1 1 calc(50% - 40px);
+                max-width: calc(50% - 40px);
+            }
+        }
+        @media (max-width: 480px) {
+            .testimonial-card {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .team-member {
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 1s ease;
+            flex: 1 1 calc(33.333% - 40px);
+            max-width: calc(33.333% - 40px);
+            box-sizing: border-box;
+        }
+        .team-member img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            border: 5px solid transparent;
+            animation: borderColorPop 3s infinite, borderWidthPop 3s infinite;
+            transition: transform 0.3s ease;
+        }
+        .team-member:hover img {
+            transform: scale(1.1);
+        }
+        .team-member h3, .team-member p {
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        .team-member:hover h3, .team-member:hover p {
+            transform: translateY(-10px);
+            opacity: 0.8;
+        }
+        @keyframes borderColorPop {
+            0% { border-color: red; }
+            25% { border-color: yellow; }
+            50% { border-color: green; }
+            75% { border-color: blue; }
+            100% { border-color: red; }
+        }
+        @keyframes borderWidthPop {
+            0%, 100% { border-width: 5px; }
+            50% { border-width: 15px; }
+        }
+        .join-team-button {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            color: white;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+        .join-team-button:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        .services-grid, .team-grid, .testimonials {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .service-card, .team-member, .testimonial-card {
+            flex: 1 1 calc(33.333% - 40px);
+            max-width: calc(33.333% - 40px);
+            box-sizing: border-box;
+        }
+        @media (max-width: 768px) {
+            .service-card, .team-member, .testimonial-card {
+                flex: 1 1 calc(50% - 40px);
+                max-width: calc(50% - 40px);
+            }
+        }
+        @media (max-width: 480px) {
+            .service-card, .team-member, .testimonial-card {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+        }
+        .stats-section p {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        .stats-section h2 {
+            font-size: 3em;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333; /* Ensure the heading is visible */
+        }
+    </style>
+</head>
+<body>
+    <div id="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+    <header>
+        <nav>
+            <div class="logo">Mctech-hub</div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="package1.html">Packages</a></li>
+                <li><a href="app.html">App Development</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="hero-slider">
+        <div class="hero-slide">
+            <div class="hero-content">
+                <h1>Welcome to Mctech-hub</h1>
+                <p>Your partner in web and application development</p>
+                <a href="services.html" class="button">Explore Our Services</a>
+            </div>
+        </div>
+        <div class="hero-slide">
+            <div class="hero-content">
+                <h1>Innovative Solutions</h1>
+                <p>We provide cutting-edge web and application development services</p>
+                <a href="portfolio.html" class="button">View Our Portfolio</a>
+            </div>
+        </div>
+        <div class="hero-slide">
+            <div class="hero-content">
+                <h1>Grow Your Business</h1>
+                <p>Boost your online presence with our expert services</p>
+                <a href="contact.html" class="button">Contact Us</a>
+            </div>
+        </div>
+    </div>
+    <main>
+        <section id="about" class="animate__animated animate__fadeInUp">
+            <h2>About Us</h2>
+            <p>Mctech-hub is the leading web development company in Uganda, offering top-notch web and application development services to help businesses thrive in the digital world.</p>
+        </section>
+        <section id="services-overview" class="animate__animated animate__fadeInUp">
+            <div class="services-grid">
+                <h2>Our Services</h2>
+                <div class="service-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Web Development</h3>
+                    <p>Custom websites built with modern technologies</p>
+                    <a href="services.html" class="button">Learn more</a>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>App Development</h3>
+                    <p>Native and cross-platform mobile applications</p>
+                    <a href="services.html" class="button">Learn more</a>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-shopping-cart"></i>
+                    <h3>E-Commerce</h3>
+                    <p>Online stores with secure payment integration</p>
+                    <a href="services.html" class="button">Learn more</a>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-search"></i>
+                    <h3>SEO Services</h3>
+                    <p>Boost your online visibility and rankings</p>
+                    <a href="services.html" class="button">Learn more</a>
+                </div>
+            </div>
+        </section>
+        <section id="stats" class="stats-section">
+            <h2>Our Achievements</h2>
+            <div class="stat-item">
+                <h3>200+</h3>
+                <p>Projects Completed</p>
+            </div>
+            <div class="stat-item">
+                <h3>50+</h3>
+                <p>Happy Clients</p>
+            </div>
+            <div class="stat-item">
+                <h3>5+</h3>
+                <p>Years Experience</p>
+            </div>
+            <div class="stat-item">
+                <h3>24/7</h3>
+                <p>Support</p>
+            </div>
+        </section>
+        <section id="team">
+            <h2>Our Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="ceo.jpg" alt="Team Member">
+                    <h3>Medan City</h3>
+                    <p>Lead Developer</p>
+                </div>
+                <div class="team-member">
+                    <img src="ceo.jpg" alt="Team Member">
+                    <h3>Ram</h3>
+                    <p>Frontend Developer</p>
+                </div>
+                <div class="team-member">
+                    <img src="ceo.jpg" alt="Team Member">
+                    <h3>Ahaisibwe Achileo</h3>
+                    <p>Project Manager</p>
+                </div>
+                <div class="team-member">
+                    <img src="ceo.jpg" alt="Team Member">
+                    <h3>Miracle Trevis</h3>
+                    <p>Backend Developer</p>
+                </div>
+                <div class="team-member">
+                    <img src="ceo.jpg" alt="Team Member">
+                    <h3>Kristel Trevor</h3>
+                    <p>Marketing Specialist</p>
+                </div>
+                <div class="team-member">
+                    <img src="ceo.jpg" alt="Team Member">
+                    <h3>New Member</h3>
+                    <p>Graphics Designer</p>
+                </div>
+            </div>
+        </section>
+        <section id="cta" class="cta-section">
+            <h2>Ready to Start Your Project</h2>
+            <!-- Add Join Our Team Button -->
+            <a href="medancityug@gmail.com" class="join-team-button">Join Our Team</a>
+            <a href="https://wa.me/+256743483280" class="join-team-button">Join via WhatsApp</a>
+        </section>
+        <section id="testimonials" class="testimonial-section">
+            <h2>Testimonials</h2>
+            <div class="testimonials">
+                <div class="testimonial-card">
+                    <img src="ceo.jpg" alt="Client 1">
+                    <p>"Mctech-hub transformed our online presence. Highly recommend!"</p>
+                    <strong>- Client 1</strong>
+                </div>
+                <div class="testimonial-card">
+                    <img src="ceo.jpg" alt="Client 2">
+                    <p>"Professional and reliable service. Our go-to web development partner."</p>
+                    <strong>- Client 2</strong>
+                </div>
+                <div class="testimonial-card">
+                    <img src="ceo.jpg" alt="Client 3">
+                    <p>"Exceptional quality and support. Our business has grown significantly."</p>
+                    <strong>- Client 3</strong>
+                </div>
+            </div>
+        </section>
+        <section id="contact-form">
+            <h2>Contact Us</h2>
+            <form action="submit_form.php" method="post">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="button">Send Message</button>
+            </form>
+        </section>
+        <!-- <section id="some-section">
+            <div class="responsive-iframe">
+                <iframe src="https://www.example.com" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </section> -->
+    </main>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Mctech-hub</h3>
+                <p>Leading web development company in Uganda, offering top-notch web and application development services.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
+                    <li><a href="services.html"><i class="fas fa-concierge-bell"></i>Services</a></li>
+                    <li><a href="portfolio.html"><i class="fas fa-briefcase"></i>Portfolio</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i>Contact</a></li>
+                    <li><a href="package1.html"><i class="fas fa-box"></i>Packages</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Mctech-hub. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

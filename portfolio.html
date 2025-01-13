@@ -21,9 +21,10 @@
         }
         .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Ensure cards are flexible */
             gap: 20px;
-            padding-bottom: 40px; /* Add space below the cards */
+            padding: 20px;
+            justify-content: center; /* Center items horizontally */
         }
         .portfolio-item {
             position: relative;
@@ -33,6 +34,12 @@
             transition: transform 0.3s ease;
             background: #fff;
             padding: 20px; /* Add padding to ensure content is visible */
+            width: 100%; /* Ensure items are responsive */
+            max-width: 100%; /* Ensure items are responsive */
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center content inside the card */
         }
         .portfolio-item:hover {
             transform: translateY(-10px);
@@ -91,6 +98,42 @@
         }
         .portfolio-item:first-child {
             height: 400px; /* Decrease height to make it consistent with others */
+        }
+        @media (max-width: 768px) {
+            .portfolio-item {
+                padding: 15px;
+            }
+            .portfolio-overlay {
+                padding: 20px;
+            }
+            .portfolio-overlay h3 {
+                font-size: 20px;
+            }
+            .portfolio-overlay p {
+                font-size: 14px;
+            }
+            .portfolio-overlay .button {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+        }
+        @media (max-width: 480px) {
+            .portfolio-item {
+                padding: 10px;
+            }
+            .portfolio-overlay {
+                padding: 15px;
+            }
+            .portfolio-overlay h3 {
+                font-size: 18px;
+            }
+            .portfolio-overlay p {
+                font-size: 12px;
+            }
+            .portfolio-overlay .button {
+                font-size: 12px;
+                padding: 6px 12px;
+            }
         }
     </style>
 </head>
